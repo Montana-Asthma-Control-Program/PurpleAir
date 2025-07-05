@@ -1,0 +1,12 @@
+title: Montana DPHHS Asthma Control Program PurpleAir Network
+description: Sub-daily updates from the netowkr
+author: R. Kyle Bocinsky
+url: "https://Montana-Asthma-Control-Program.github.io/PurpleAir/"  # Your GitHub Pages URL
+baseurl: "/PurpleAir"
+
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
+
+# minima:
+#   skin: classic
