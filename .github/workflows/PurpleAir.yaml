@@ -1,5 +1,7 @@
 name: Fetch PurpleAir Data
 
+permissions: write-all
+
 on:
   schedule:
     - cron: '0 */6 * * *'  # Every 6 hours
