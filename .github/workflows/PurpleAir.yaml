@@ -27,9 +27,12 @@ jobs:
         run: python PurpleAir.py
 
       - name: Commit and push data
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git add data/
           git diff --quiet --cached || git commit -m "Update sensor data [auto]"
-          git push
+          git push origin HEAD
