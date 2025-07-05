@@ -24,13 +24,12 @@ jobs:
       - name: Run sensor data fetch script
         env:
           PURPLEAIR_API_KEY: ${{ secrets.PURPLEAIR_API_KEY }}
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: python PurpleAir.py
 
-      - name: commit
+      - name: Commit and push data
         run: |
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git add .
-          git commit --allow-empty -m 'update sensor data'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --quiet --cached || git commit -m "Update sensor data [auto]"
           git push
