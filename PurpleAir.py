@@ -2,6 +2,8 @@ import os
 import requests
 import time
 import csv
+import json
+import pandas as pd
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -10,6 +12,7 @@ from pathlib import Path
 API_KEY = os.getenv("PURPLEAIR_API_KEY")  # Must be set in your environment
 SENSORS_FILE = "sensors.csv"
 DATA_DIR = Path("data")
+LATEST_DATA_FILE = "latest-data.json"
 CSV_FIELDS = ["timestamp", "datetime", 
               "Raw PM2.5 (µg/m³)", "Relative Humidity (%)", 
               "Raw PM2.5 (US EPA) (µg/m³)", "US EPA PM2.5 (US EPA) (AQI)"]
@@ -107,14 +110,14 @@ def read_sensor_ids(filepath):
     return ids
 
 def fetch_sensor_data(sensor):
-    url = f"https://api.purpleair.com/v1/sensors/{sensor["ID"]}/history"
+    url = f"https://api.purpleair.com/v1/sensors/{sensor["Sensor ID"]}/history"
     end_time = int(time.time())
     start_time = end_time - (2 * 60 * 60)  # 2 hours ago (for redundancy)
     params = {
         "start_timestamp": start_time,
         "end_timestamp": end_time,
         "average": 60, 
-        "fields": ','.join(["pm2.5_cf_1" if sensor["Location"] == "Indoor" else "pm2.5_atm", "humidity"])
+        "fields": ','.join(["pm2.5_cf_1" if sensor["Setting"] == "Indoor" else "pm2.5_atm", "humidity"])
     }
     headers = {
         "X-API-Key": API_KEY
@@ -136,10 +139,10 @@ def read_existing_timestamps(csv_path):
 
 def write_sensor_data(sensor, data):
     if not data or "data" not in data or "fields" not in data:
-        print(f"No valid data to write for sensor {sensor["ID"]}")
+        print(f"No valid data to write for sensor {sensor["Sensor ID"]}")
         return
 
-    csv_path = DATA_DIR / f"{sensor["ID"]}.csv"
+    csv_path = DATA_DIR / f"{sensor["Sensor ID"]}.csv"
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     existing_timestamps = read_existing_timestamps(csv_path)
 
@@ -153,7 +156,7 @@ def write_sensor_data(sensor, data):
         # Convert to timezone-aware datetimes
         dt_utc = datetime.fromtimestamp(ts, tz=timezone.utc)
         dt_mtn = dt_utc.astimezone(ZoneInfo("America/Denver"))
-        pm = row_dict.get("pm2.5_cf_1" if sensor["Location"] == "Indoor" else "pm2.5_atm")
+        pm = row_dict.get("pm2.5_cf_1" if sensor["Setting"] == "Indoor" else "pm2.5_atm")
         rh = row_dict.get("humidity")
         epa_pm = apply_epa_pm_correction(pm, rh)
         aqi = aqi_from_pm(epa_pm)
@@ -169,7 +172,7 @@ def write_sensor_data(sensor, data):
         rows.append(row)
 
     if not rows:
-        print(f"No new rows to write for sensor {sensor_id}.")
+        print(f"No new rows to write for sensor {sensor["Sensor ID"]}.")
         return
 
     # Sort rows by timestamp before writing
@@ -183,6 +186,46 @@ def write_sensor_data(sensor, data):
         writer.writerows(rows)
     print(f"Wrote {len(rows)} new rows to {csv_path}")
 
+def get_last_record(csv_path):
+    with open(csv_path, newline='', encoding='utf-8') as f:
+        reader = csv.reader(f)
+        rows = [row for row in reader if any(row)]
+        if len(rows) < 2:
+            return None
+        headers, last_row = rows[0], rows[-1]
+        return dict(zip(headers, last_row))
+
+def build_latest_records():
+    # Load sensor metadata
+    if Path(SENSORS_FILE).exists():
+        sensors_df = pd.read_csv(SENSORS_FILE)
+    else:
+        sensors_df = pd.DataFrame()
+
+    records = []
+
+    # Loop over each CSV file
+    for file in DATA_DIR.glob("*.csv"):
+        record = get_last_record(file)
+        if record:
+            sensor_id = file.stem  # strip ".csv"
+            record["Sensor ID"] = sensor_id
+
+            # Join with sensors.csv if possible
+            if not sensors_df.empty:
+                match = sensors_df[sensors_df["Sensor ID"].astype(str) == sensor_id]
+                if not match.empty:
+                    record["Location"] = match.iloc[0].get("Location", "")
+                    record["Setting"] = match.iloc[0].get("Setting", "")
+
+            records.append((file.name, record))
+
+    # Write to JSON
+    with open(LATEST_DATA_FILE, "w", encoding="utf-8") as out:
+        json.dump(dict(records), out, indent=2)
+
+    print(f"Saved {len(records)} records to {LATEST_DATA_FILE}")
+    
 def main():
     if not API_KEY:
         raise EnvironmentError("PURPLEAIR_API_KEY environment variable not set.")
@@ -190,11 +233,13 @@ def main():
     with open(SENSORS_FILE, "r") as file:
         sensors = csv.DictReader(file)
         for sensor in sensors:
-            sensor_id = sensor['ID']
+            sensor_id = sensor['Sensor ID']
             print(f"\nFetching data for sensor {sensor_id}...")
             data = fetch_sensor_data(sensor)
             write_sensor_data(sensor, data)
             time.sleep(1)  # pauses for 1 second
+    
+    build_latest_records()
 
 if __name__ == "__main__":
     main()

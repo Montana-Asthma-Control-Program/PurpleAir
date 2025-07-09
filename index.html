@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data</title>
+    
+    <!-- Include Open Sans from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap">
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.2/css/fixedHeader.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.2.2/js/dataTables.fixedHeader.min.js"></script>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #fff;
+            position: relative;
+            padding-bottom: 0px !important;
+            height: auto !important;
+            min-height: 100%;
+            box-sizing: border-box;
+            -webkit-font-smoothing: inherit;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        table.dataTable {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .dataTables_filter {
+            float: left !important;
+        }
+
+        .highlight-text {
+            color: #d9534f !important;
+            /* Red color for text */
+        }
+
+        /*                                  AQI         RAW PM2.5
+    Good                               0 - 50   |   0.0 – 12.0
+    Moderate                          51 - 100  |  12.1 – 35.4
+    Unhealthy for Sensitive Groups   101 – 150  |  35.5 – 55.4
+    Unhealthy                        151 – 200  |  55.5 – 150.4
+    Very Unhealthy                   201 – 300  |  150.5 – 250.4
+    Hazardous                        301 – 400  |  250.5 – 350.4
+    Hazardous                        401 – 500  |  350.5 – 500.4
+    */
+
+        .aqi-good {
+            background-color: rgba(146, 255, 127, 1) !important;
+        }
+
+        .aqi-moderate {
+            background-color: rgba(254, 191, 12, 1.0) !important;
+        }
+
+        .aqi-sensitive {
+            background-color: rgba(252, 109, 11, 1.0) !important;
+        }
+
+        .aqi-unhealthy {
+            background-color: rgba(233, 0, 6, 1.0) !important;
+        }
+
+        .aqi-very-unhealthy {
+            background-color: rgba(116, 0, 133, 1.0) !important;
+        }
+
+        .aqi-hazardous {
+            background-color: rgba(80, 0, 17, 1.0) !important;
+        }
+
+        .dtfh-floatingparent .dtfh-floatingparenthead {
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="sensorTable" class="display responsive nowrap compact" style="width:100%; height:100vh; overflow-y:auto;">
+        <thead>
+            <tr>
+                <th class="all">AQI</th>
+                <th class="all">Location</th>
+                <th>Last Report</th>
+                <th>Setting</th>
+                <th>ID</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+    const response = await fetch("latest-data.json");
+    const records = await response.json();
+
+    const firstRecord = Object.values(records)[0];
+    const headers = Object.keys(firstRecord);
+    const tableData = Object.entries(records).map(([filename, data]) => {
+    return {
+        ...data,
+        filename,
+        // Coerce AQI to number for coloring & sorting
+        "aqi": Number(data["US EPA PM2.5 (US EPA) (AQI)"]),
+        name: "<a href='https://map.purpleair.com/air-quality-standards-us-epa-aqi?select="
+                                .concat(data["Sensor ID"])
+                                .concat("#8.37/46.465/-114.089' target='_blank'>")
+                                .concat(data["Location"])
+                                .concat(" (")
+                                .concat(data["Setting"])
+                                .concat(")")
+        .concat("</a>"),
+    };
+});
+        console.log(tableData)
+    
+        const columns = headers.map(h => ({ title: h, data: h }));
+    columns.push({ title: "filename", data: "filename" });
+
+
+$('#sensorTable')
+                        .DataTable({
+                            data: tableData,
+                            columns: [{
+                                    data: 'aqi'
+                                },
+                                {
+                                    data: 'name'
+                                },
+                                {
+                                    data: 'datetime'
+                                },
+                                {
+                                    data: 'Setting'
+                                },
+                                {
+                                    data: 'Sensor ID'
+                                }
+                            ],
+                            columnDefs: [{
+                                targets: 0,
+                                className: 'dt-center'
+                            }],
+                            //scrollY: 'calc(100vh - 200px)', // Adjust this based on your layout
+                            scrollCollapse: true,
+                            paging: false,
+                            info: false,
+                            order: [
+                                [1, 'asc']
+                            ], // Sort by the second column (Name) in ascending order
+                            responsive: true, // Enable responsive extension
+                            fixedHeader: true, // Enable fixed header
+                            searching: false,
+                            drawCallback: function(settings) {
+                                // Apply text color after each draw event
+                                const now = new Date();
+                                const hour = 120 * 60 * 1000; // 120 minutes in milliseconds
+
+                                // Iterate through each row and apply text color if needed
+                                this.api().rows().every(function() {
+                                    const row = this.node();
+                                    const rowData = this.data();
+                                    const lastSeenDate = new Date(rowData.datetime);
+                                    const lastSeenCell = $(row).find('td').eq(2); // Last Seen column index
+
+                                    if (now - lastSeenDate > hour) {
+                                        lastSeenCell.addClass('highlight-text');
+                                    } else {
+                                        lastSeenCell.removeClass('highlight-text');
+                                    }
+
+                                    const aqi = rowData.aqi;
+                                    const aqiCell = $(row).find('td').eq(0); // Last Seen column index
+
+                                    if (aqi <= 50) {
+                                        aqiCell.addClass('aqi-good');
+                                    } else if (aqi <= 100) {
+                                        aqiCell.addClass('aqi-moderate');
+                                    } else if (aqi <= 150) {
+                                        aqiCell.addClass('aqi-sensitive');
+                                    } else if (aqi <= 200) {
+                                        aqiCell.addClass('aqi-unhealthy');
+                                    } else if (aqi <= 300) {
+                                        aqiCell.addClass('aqi-very-unhealthy');
+                                    } else {
+                                        aqiCell.addClass('aqi-hazardous');
+                                    }
+
+                                });
+                            }
+                        });
+        });
+</script>
+
+</body>
+
+</html>
