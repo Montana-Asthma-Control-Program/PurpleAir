@@ -109,11 +109,11 @@ def read_sensor_ids(filepath):
 def fetch_sensor_data(sensor):
     url = f"https://api.purpleair.com/v1/sensors/{sensor["ID"]}/history"
     end_time = int(time.time())
-    start_time = end_time - (1 * 60 * 60)  # 1 hours ago (for redundancy)
+    start_time = end_time - (2 * 60 * 60)  # 2 hours ago (for redundancy)
     params = {
         "start_timestamp": start_time,
         "end_timestamp": end_time,
-        "average": 10, 
+        "average": 60, 
         "fields": ','.join(["pm2.5_cf_1" if sensor["Location"] == "Indoor" else "pm2.5_atm", "humidity"])
     }
     headers = {
