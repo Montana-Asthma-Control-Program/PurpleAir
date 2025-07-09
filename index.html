@@ -170,7 +170,7 @@ $('#sensorTable')
                             drawCallback: function(settings) {
                                 // Apply text color after each draw event
                                 const now = new Date();
-                                const hour = 120 * 60 * 1000; // 120 minutes in milliseconds
+                                const hour = 360 * 60 * 1000; // 360 minutes in milliseconds
 
                                 // Iterate through each row and apply text color if needed
                                 this.api().rows().every(function() {
