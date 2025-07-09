@@ -125,7 +125,12 @@
                                 .concat(" (")
                                 .concat(data["Setting"])
                                 .concat(")")
-        .concat("</a>"),
+                                .concat("</a>"),
+        id: "<a href='data/"
+                                .concat(data["Sensor ID"])
+                                .concat(".csv' target='_blank'>")
+                                .concat(data["Sensor ID"])
+                                .concat("</a>")
     };
 });
         console.log(tableData)
@@ -150,7 +155,7 @@ $('#sensorTable')
                                     data: 'Setting'
                                 },
                                 {
-                                    data: 'Sensor ID'
+                                    data: 'id'
                                 }
                             ],
                             columnDefs: [{
