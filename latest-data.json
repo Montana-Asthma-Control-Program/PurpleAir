@@ -11,23 +11,23 @@
     "Setting": "Outdoor"
   },
   "231845.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "13.7",
-    "Relative Humidity (%)": "31",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.3",
-    "US EPA PM2.5 (US EPA) (AQI)": "43",
+    "timestamp": "1754240400",
+    "datetime": "2025-08-03T11:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "12.2",
+    "Relative Humidity (%)": "16",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.8",
+    "US EPA PM2.5 (US EPA) (AQI)": "45",
     "Sensor ID": "231845",
     "Location": "Darby Library",
     "Setting": "Outdoor"
   },
   "229703.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "5.0",
+    "timestamp": "1754240400",
+    "datetime": "2025-08-03T11:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "4.0",
     "Relative Humidity (%)": "21",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "6.6",
-    "US EPA PM2.5 (US EPA) (AQI)": "27",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "6.0",
+    "US EPA PM2.5 (US EPA) (AQI)": "25",
     "Sensor ID": "229703",
     "Location": "Bitterroot Library",
     "Setting": "Indoor"
@@ -44,12 +44,12 @@
     "Setting": "Indoor"
   },
   "104370.csv": {
-    "timestamp": "1754236800",
-    "datetime": "2025-08-03T10:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "17.2",
-    "Relative Humidity (%)": "45",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.9",
-    "US EPA PM2.5 (US EPA) (AQI)": "45",
+    "timestamp": "1754240400",
+    "datetime": "2025-08-03T11:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.3",
+    "Relative Humidity (%)": "37",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.6",
+    "US EPA PM2.5 (US EPA) (AQI)": "44",
     "Sensor ID": "104370",
     "Location": "North Valley Library",
     "Setting": "Outdoor"
@@ -88,12 +88,12 @@
     "Setting": "Indoor"
   },
   "36673.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "9.2",
-    "Relative Humidity (%)": "48",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "6.4",
-    "US EPA PM2.5 (US EPA) (AQI)": "27",
+    "timestamp": "1754240400",
+    "datetime": "2025-08-03T11:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "9.4",
+    "Relative Humidity (%)": "40",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "7.2",
+    "US EPA PM2.5 (US EPA) (AQI)": "30",
     "Sensor ID": "36673",
     "Location": "Bitterroot Library",
     "Setting": "Outdoor"
@@ -121,12 +121,12 @@
     "Setting": "Indoor"
   },
   "251305.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "18.1",
-    "Relative Humidity (%)": "52",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.8",
-    "US EPA PM2.5 (US EPA) (AQI)": "45",
+    "timestamp": "1754240400",
+    "datetime": "2025-08-03T11:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.0",
+    "Relative Humidity (%)": "26",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "11.4",
+    "US EPA PM2.5 (US EPA) (AQI)": "47",
     "Sensor ID": "251305",
     "Location": "Lolo Library",
     "Setting": "Outdoor"
