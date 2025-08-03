@@ -127,7 +127,7 @@ def fetch_sensor_data(sensor):
     if response.ok:
         return response.json()
     else:
-        print(f"Failed to fetch data for sensor {sensor_id}: {response.status_code}")
+        print(f"Failed to fetch data for sensor {sensor["Sensor ID"]}: {response.status_code}")
         return None
     
 def read_existing_timestamps(csv_path):
