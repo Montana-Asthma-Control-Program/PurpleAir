@@ -1,11 +1,11 @@
 {
   "154657.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "19.4",
-    "Relative Humidity (%)": "52",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "11.4",
-    "US EPA PM2.5 (US EPA) (AQI)": "48",
+    "timestamp": "1754236800",
+    "datetime": "2025-08-03T10:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "19.0",
+    "Relative Humidity (%)": "43",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "12.0",
+    "US EPA PM2.5 (US EPA) (AQI)": "50",
     "Sensor ID": "154657",
     "Location": "Missoula Senior Center",
     "Setting": "Outdoor"
@@ -33,10 +33,10 @@
     "Setting": "Indoor"
   },
   "230373.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.1",
-    "Relative Humidity (%)": "28",
+    "timestamp": "1754236800",
+    "datetime": "2025-08-03T10:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.0",
+    "Relative Humidity (%)": "27",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.4",
     "US EPA PM2.5 (US EPA) (AQI)": "14",
     "Sensor ID": "230373",
@@ -44,23 +44,23 @@
     "Setting": "Indoor"
   },
   "104370.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "17.7",
-    "Relative Humidity (%)": "56",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.2",
-    "US EPA PM2.5 (US EPA) (AQI)": "42",
+    "timestamp": "1754236800",
+    "datetime": "2025-08-03T10:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "17.2",
+    "Relative Humidity (%)": "45",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.9",
+    "US EPA PM2.5 (US EPA) (AQI)": "45",
     "Sensor ID": "104370",
     "Location": "North Valley Library",
     "Setting": "Outdoor"
   },
   "208103.csv": {
-    "timestamp": "1754233200",
-    "datetime": "2025-08-03T09:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "16.6",
-    "Relative Humidity (%)": "53",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "9.9",
-    "US EPA PM2.5 (US EPA) (AQI)": "41",
+    "timestamp": "1754236800",
+    "datetime": "2025-08-03T10:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.1",
+    "Relative Humidity (%)": "40",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.2",
+    "US EPA PM2.5 (US EPA) (AQI)": "43",
     "Sensor ID": "208103",
     "Location": "Seeley Library",
     "Setting": "Outdoor"
