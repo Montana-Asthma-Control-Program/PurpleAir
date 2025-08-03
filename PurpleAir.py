@@ -237,7 +237,7 @@ def main():
             print(f"\nFetching data for sensor {sensor_id}...")
             data = fetch_sensor_data(sensor)
             write_sensor_data(sensor, data)
-            time.sleep(1)  # pauses for 1 second
+            time.sleep(2)  # pauses for 2 seconds
     
     build_latest_records()
 
