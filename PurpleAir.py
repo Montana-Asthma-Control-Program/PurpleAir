@@ -195,7 +195,8 @@ def get_last_record(csv_path):
 
     # Sort by datetime and return the last record as a dict
     last_row = df.sort_values("datetime").iloc[-1]
-    return last_row.to_dict()
+    
+    return last_row.fillna('').astype(str).to_dict()
 
 def build_latest_records():
     # Load sensor metadata
