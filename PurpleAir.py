@@ -166,7 +166,7 @@ def write_sensor_data(sensor, data):
             "datetime": dt_mtn.isoformat(),
             "Raw PM2.5 (µg/m³)": pm,
             "Relative Humidity (%)": rh,
-            "Raw PM2.5 (US EPA) (µg/m³)": round(epa_pm, 1),
+            "Raw PM2.5 (US EPA) (µg/m³)": None if epa_pm is None else round(epa_pm, 1),
             "US EPA PM2.5 (US EPA) (AQI)": aqi
         }
         rows.append(row)
