@@ -112,7 +112,7 @@ def read_sensor_ids(filepath):
 def fetch_sensor_data(sensor):
     url = f"https://api.purpleair.com/v1/sensors/{sensor["Sensor ID"]}/history"
     end_time = int(time.time())
-    start_time = end_time - (48 * 60 * 60)  # 2 hours ago (for redundancy)
+    start_time = end_time - (2 * 60 * 60)  # 2 hours ago (for redundancy)
     params = {
         "start_timestamp": start_time,
         "end_timestamp": end_time,
