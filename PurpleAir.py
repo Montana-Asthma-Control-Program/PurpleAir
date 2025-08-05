@@ -192,12 +192,6 @@ def get_last_record(csv_path):
         return None
     if "datetime" not in df.columns:
         raise ValueError("Missing 'datetime' column in CSV")
-    
-    # Parse datetime column if not already parsed
-    df["datetime"] = pd.to_datetime(df["datetime"], errors='coerce')
-    df = df.dropna(subset=["datetime"])
-    if df.empty:
-        return None
 
     # Sort by datetime and return the last record as a dict
     last_row = df.sort_values("datetime").iloc[-1]
