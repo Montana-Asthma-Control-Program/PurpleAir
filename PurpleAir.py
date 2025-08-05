@@ -187,13 +187,21 @@ def write_sensor_data(sensor, data):
     print(f"Wrote {len(rows)} new rows to {csv_path}")
 
 def get_last_record(csv_path):
-    with open(csv_path, newline='', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        rows = [row for row in reader if any(row)]
-        if len(rows) < 2:
-            return None
-        headers, last_row = rows[0], rows[-1]
-        return dict(zip(headers, last_row))
+    df = pd.read_csv(csv_path)
+    if df.empty:
+        return None
+    if "datetime" not in df.columns:
+        raise ValueError("Missing 'datetime' column in CSV")
+    
+    # Parse datetime column if not already parsed
+    df["datetime"] = pd.to_datetime(df["datetime"], errors='coerce')
+    df = df.dropna(subset=["datetime"])
+    if df.empty:
+        return None
+
+    # Sort by datetime and return the last record as a dict
+    last_row = df.sort_values("datetime").iloc[-1]
+    return last_row.to_dict()
 
 def build_latest_records():
     # Load sensor metadata
