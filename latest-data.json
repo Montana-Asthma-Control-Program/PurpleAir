@@ -1,18 +1,18 @@
 {
   "208103.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "3.9",
-    "Relative Humidity (%)": "72",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "1.6",
+    "Relative Humidity (%)": "70",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "1.8",
     "US EPA PM2.5 (US EPA) (AQI)": "7.0",
     "Sensor ID": "208103",
     "Location": "Seeley Library",
     "Setting": "Outdoor"
   },
   "229687.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "0.0",
     "Relative Humidity (%)": "23",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.8",
@@ -22,9 +22,9 @@
     "Setting": "Indoor"
   },
   "154657.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "4.6",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "5.9",
     "Relative Humidity (%)": "",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "",
     "US EPA PM2.5 (US EPA) (AQI)": "-",
@@ -33,9 +33,9 @@
     "Setting": "Outdoor"
   },
   "229703.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.5",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.4",
     "Relative Humidity (%)": "22",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.1",
     "US EPA PM2.5 (US EPA) (AQI)": "17",
@@ -44,31 +44,31 @@
     "Setting": "Indoor"
   },
   "251305.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "4.6",
-    "Relative Humidity (%)": "72",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "2.0",
-    "US EPA PM2.5 (US EPA) (AQI)": "8.0",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "4.5",
+    "Relative Humidity (%)": "67",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "2.3",
+    "US EPA PM2.5 (US EPA) (AQI)": "10.0",
     "Sensor ID": "251305",
     "Location": "Lolo Library",
     "Setting": "Outdoor"
   },
   "104370.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "4.6",
-    "Relative Humidity (%)": "65",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "2.6",
-    "US EPA PM2.5 (US EPA) (AQI)": "11",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "5.5",
+    "Relative Humidity (%)": "66",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "2.9",
+    "US EPA PM2.5 (US EPA) (AQI)": "12",
     "Sensor ID": "104370",
     "Location": "North Valley Library",
     "Setting": "Outdoor"
   },
   "231845.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.6",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.7",
     "Relative Humidity (%)": "61",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "1.9",
     "US EPA PM2.5 (US EPA) (AQI)": "8.0",
@@ -77,9 +77,9 @@
     "Setting": "Outdoor"
   },
   "229697.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.4",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.3",
     "Relative Humidity (%)": "26",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.7",
     "US EPA PM2.5 (US EPA) (AQI)": "15",
@@ -88,8 +88,8 @@
     "Setting": "Indoor"
   },
   "36673.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "1.4",
     "Relative Humidity (%)": "52",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "2.0",
@@ -99,8 +99,8 @@
     "Setting": "Outdoor"
   },
   "230373.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "0.0",
     "Relative Humidity (%)": "26",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.5",
@@ -110,8 +110,8 @@
     "Setting": "Indoor"
   },
   "230377.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "0.0",
     "Relative Humidity (%)": "28",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.3",
@@ -121,12 +121,12 @@
     "Setting": "Indoor"
   },
   "229685.csv": {
-    "timestamp": "1754740800",
-    "datetime": "2025-08-09T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.4",
+    "timestamp": "1754744400",
+    "datetime": "2025-08-09T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.8",
     "Relative Humidity (%)": "21",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.1",
-    "US EPA PM2.5 (US EPA) (AQI)": "17",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.4",
+    "US EPA PM2.5 (US EPA) (AQI)": "18",
     "Sensor ID": "229685",
     "Location": "Darby Library",
     "Setting": "Indoor"
