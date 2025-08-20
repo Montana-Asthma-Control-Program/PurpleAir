@@ -21,15 +21,6 @@
     "Location": "Lolo Library",
     "Setting": "Indoor"
   },
-  "154657.csv": {
-    "timestamp": "1755698400",
-    "datetime": "2025-08-20T08:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.0",
-    "Relative Humidity (%)": "",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "",
-    "US EPA PM2.5 (US EPA) (AQI)": "-",
-    "Sensor ID": "154657"
-  },
   "229703.csv": {
     "timestamp": "1755698400",
     "datetime": "2025-08-20T08:00:00-06:00",
