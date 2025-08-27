@@ -1,51 +1,73 @@
 {
-  "104370.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.5",
-    "Relative Humidity (%)": "59",
+  "208103.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.4",
+    "Relative Humidity (%)": "46",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "9.9",
+    "US EPA PM2.5 (US EPA) (AQI)": "41.0",
+    "Sensor ID": "208103",
+    "Location": "Seeley Library",
+    "Setting": "Outdoor"
+  },
+  "229687.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "13.1",
+    "Relative Humidity (%)": "25",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.5",
+    "US EPA PM2.5 (US EPA) (AQI)": "44",
+    "Sensor ID": "229687",
+    "Location": "Lolo Library",
+    "Setting": "Indoor"
+  },
+  "229703.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "3.9",
+    "Relative Humidity (%)": "25",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "5.6",
+    "US EPA PM2.5 (US EPA) (AQI)": "23",
+    "Sensor ID": "229703",
+    "Location": "Bitterroot Library",
+    "Setting": "Indoor"
+  },
+  "251305.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.2",
+    "Relative Humidity (%)": "63",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "8.3",
+    "US EPA PM2.5 (US EPA) (AQI)": "35.0",
+    "Sensor ID": "251305",
+    "Location": "Lolo Library",
+    "Setting": "Outdoor"
+  },
+  "104370.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.7",
+    "Relative Humidity (%)": "61",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "8.2",
     "US EPA PM2.5 (US EPA) (AQI)": "34",
     "Sensor ID": "104370",
     "Location": "North Valley Library",
     "Setting": "Outdoor"
   },
-  "230373.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "0.3",
-    "Relative Humidity (%)": "24",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.8",
-    "US EPA PM2.5 (US EPA) (AQI)": "16",
-    "Sensor ID": "230373",
-    "Location": "Seeley Library",
-    "Setting": "Indoor"
-  },
-  "208103.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.7",
-    "Relative Humidity (%)": "43",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "10.3",
-    "US EPA PM2.5 (US EPA) (AQI)": "43.0",
-    "Sensor ID": "208103",
-    "Location": "Seeley Library",
-    "Setting": "Outdoor"
-  },
-  "158835.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.3",
-    "Relative Humidity (%)": "40",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "9.8",
-    "US EPA PM2.5 (US EPA) (AQI)": "41",
-    "Sensor ID": "158835",
-    "Location": "Missoula Senior Center",
+  "231845.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "16.3",
+    "Relative Humidity (%)": "71",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "8.2",
+    "US EPA PM2.5 (US EPA) (AQI)": "34.0",
+    "Sensor ID": "231845",
+    "Location": "Darby Library",
     "Setting": "Outdoor"
   },
   "229697.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "0.3",
     "Relative Humidity (%)": "26",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "3.7",
@@ -54,42 +76,42 @@
     "Location": "North Valley Library",
     "Setting": "Indoor"
   },
-  "229703.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.3",
-    "Relative Humidity (%)": "24",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.9",
-    "US EPA PM2.5 (US EPA) (AQI)": "20",
-    "Sensor ID": "229703",
+  "36673.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "8.9",
+    "Relative Humidity (%)": "58",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "5.4",
+    "US EPA PM2.5 (US EPA) (AQI)": "23",
+    "Sensor ID": "36673",
     "Location": "Bitterroot Library",
+    "Setting": "Outdoor"
+  },
+  "230373.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.0",
+    "Relative Humidity (%)": "24",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.7",
+    "US EPA PM2.5 (US EPA) (AQI)": "20",
+    "Sensor ID": "230373",
+    "Location": "Seeley Library",
     "Setting": "Indoor"
   },
-  "251305.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.9",
-    "Relative Humidity (%)": "59",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "9.0",
-    "US EPA PM2.5 (US EPA) (AQI)": "37.0",
-    "Sensor ID": "251305",
-    "Location": "Lolo Library",
-    "Setting": "Outdoor"
-  },
-  "231845.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.0",
-    "Relative Humidity (%)": "66",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "7.4",
-    "US EPA PM2.5 (US EPA) (AQI)": "31.0",
-    "Sensor ID": "231845",
-    "Location": "Darby Library",
-    "Setting": "Outdoor"
+  "230377.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.1",
+    "Relative Humidity (%)": "24",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.8",
+    "US EPA PM2.5 (US EPA) (AQI)": "20",
+    "Sensor ID": "230377",
+    "Location": "Missoula Senior Center",
+    "Setting": "Indoor"
   },
   "229685.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
     "Raw PM2.5 (\u00b5g/m\u00b3)": "1.6",
     "Relative Humidity (%)": "22",
     "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.7",
@@ -98,37 +120,15 @@
     "Location": "Darby Library",
     "Setting": "Indoor"
   },
-  "229687.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "14.3",
-    "Relative Humidity (%)": "24",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "11.2",
-    "US EPA PM2.5 (US EPA) (AQI)": "47",
-    "Sensor ID": "229687",
-    "Location": "Lolo Library",
-    "Setting": "Indoor"
-  },
-  "36673.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "8.0",
-    "Relative Humidity (%)": "56",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "5.1",
-    "US EPA PM2.5 (US EPA) (AQI)": "21",
-    "Sensor ID": "36673",
-    "Location": "Bitterroot Library",
-    "Setting": "Outdoor"
-  },
-  "230377.csv": {
-    "timestamp": "1756296000",
-    "datetime": "2025-08-27T06:00:00-06:00",
-    "Raw PM2.5 (\u00b5g/m\u00b3)": "2.0",
-    "Relative Humidity (%)": "24",
-    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "4.7",
-    "US EPA PM2.5 (US EPA) (AQI)": "20",
-    "Sensor ID": "230377",
+  "158835.csv": {
+    "timestamp": "1756299600",
+    "datetime": "2025-08-27T07:00:00-06:00",
+    "Raw PM2.5 (\u00b5g/m\u00b3)": "15.1",
+    "Relative Humidity (%)": "44",
+    "Raw PM2.5 (US EPA) (\u00b5g/m\u00b3)": "9.9",
+    "US EPA PM2.5 (US EPA) (AQI)": "41",
+    "Sensor ID": "158835",
     "Location": "Missoula Senior Center",
-    "Setting": "Indoor"
+    "Setting": "Outdoor"
   }
 }
